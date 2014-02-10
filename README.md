@@ -2,11 +2,8 @@
 
 __zram__ compresses swap partitions into RAM for performance.
 
-You need Linux kernel version 2.6.37.1 or better to use 
-__zram__. For Fedora 16 you can just install kmod-staging from
-[rpmfusion](http://rpmfusion.org/Configuration/) to get the module:
-
-    sudo yum install kmod-staging
+You need Linux kernel version 3.14 or better to use 
+__zram__.
 
 ### Automated Install
 

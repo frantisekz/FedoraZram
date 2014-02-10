@@ -15,7 +15,6 @@ Requires(post): systemd-units
 Requires(preun): systemd-units
 Requires(postun): systemd-units
 Requires: filesystem >= 2.0.1, initscripts, bc > 1.0
-Requires: kmod-staging
 # No debug info for bare scripts, right?
 %define debug_package %{nil}
 # http://fedoraproject.org/wiki/Changes/UnversionedDocdirs
@@ -25,7 +24,7 @@ Requires: kmod-staging
 %description
 zram compresses swap partitions into RAM for performance.
 
-You need Linux kernel version 2.6.37.1 or better to use zram.
+You need Linux kernel version 3.14 or better to use zram.
 
 
 %prep
@@ -78,6 +77,10 @@ fi
 
 
 %changelog
+* Mon Feb 10 2014 František Zatloukal <Zatloukal.Frantisek@gmail.com> - 0:1.0.0-3
+- Remove kmod-staging dependency
+- Test on Fedora 21
+
 * Mon Nov 25 2013 Doncho Gunchev <dgunchev@gmail.com> - 0:1.0.0-2
 - http://fedoraproject.org/wiki/Changes/UnversionedDocdirs
 - Added kmod-staging dependency
